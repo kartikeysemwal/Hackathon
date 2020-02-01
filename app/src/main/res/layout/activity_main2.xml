@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="EMAL"
+        android:text="@string/email"
         android:id="@+id/email"
         android:textSize="30sp"
         android:layout_marginTop="10dp"
@@ -21,6 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:id="@+id/emal1"
+        android:digits="abcdefghijklmnopqrstuvwxyz1234567890@."
         android:inputType="text"
         android:layout_marginHorizontal="15dp"
         android:background="@drawable/etbg"
@@ -39,28 +40,31 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="18dp"
         android:orientation="horizontal">
+
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/teacher"
+            android:id="@+id/user"
             android:fontFamily="sans-serif-medium"
             android:textColor="@color/white"
             android:checked="true"
             android:textSize="30sp"
-            android:text="Teacher"/>
+            android:text="@string/user"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:textColor="@color/white"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-medium"
             android:textSize="30sp"
-            android:id="@+id/student"
-            android:text="Student"></RadioButton>
+            android:id="@+id/admin"
+            android:text="@string/admin">
+
+        </RadioButton>
     </RadioGroup>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="PASSWORD"
+        android:text="@string/password"
         android:id="@+id/pass1"
         android:layout_below="@id/rd"
         android:textSize="30sp"
@@ -68,24 +72,25 @@
         android:layout_marginLeft="18dp"
         android:fontFamily="sans-serif-medium"
         android:textColor="@color/white"/>
+
     <EditText
+        android:id="@+id/pass2"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:id="@+id/pass2"
-        android:inputType="text"
+        android:layout_below="@+id/pass1"
         android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="5dp"
         android:background="@drawable/etbg"
         android:fontFamily="sans-serif-light"
-        android:layout_below="@+id/pass1"
+        android:inputType="textPassword"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:textColor="@color/white"
-        android:textSize="15sp"
-        android:layout_marginTop="5dp"/>
+        android:textSize="15sp" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CONFRM PASSWORD"
+        android:text="@string/confirm_password"
         android:id="@+id/pass3"
         android:layout_below="@id/pass2"
         android:textSize="30sp"
@@ -93,26 +98,27 @@
         android:layout_marginLeft="18dp"
         android:fontFamily="sans-serif-medium"
         android:textColor="@color/white"/>
+
     <EditText
+        android:id="@+id/pass4"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:id="@+id/pass4"
-        android:inputType="text"
+        android:layout_below="@+id/pass3"
         android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="5dp"
         android:background="@drawable/etbg"
         android:fontFamily="sans-serif-light"
-        android:layout_below="@+id/pass3"
+        android:inputType="textPassword"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:textColor="@color/white"
-        android:textSize="15sp"
-        android:layout_marginTop="5dp"/>
+        android:textSize="15sp" />
     <Button
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:layout_below="@+id/pass4"
         android:layout_marginTop="20dp"
-        android:text="SIGN UP"
+        android:text="@string/sign_up"
         android:id="@+id/sgn"
         android:background="@drawable/btnbg"
         android:textColor="@color/white"

@@ -9,4 +9,28 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+
+    <string name="hello">Hello World, MyAndroidAppActivity!</string>
+    <string name="radio_english">English</string>
+    <string name="radio_hindi">हिंदी</string>
+    <string name="email">EMAIL</string>
+    <string name="education">Education</string>
+    <string name="employement">Employement</string>
+    <string name="health">Health Care Services</string>
+    <string name="current_affairs">Current Affairs</string>
+    <string name="charity">Charity</string>
+    <string name="password">PASSWORD</string>
+    <string name="login">LOGIN</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="name">NAME</string>
+    <string name="contact_no">CONTACT NO.</string>
+    <string name="d_o_b">D.O.B</string>
+    <string name="pick_a_date">Pick a date</string>
+    <string name="next">Next</string>
+    <string name="user">User</string>
+    <string name="admin">Admin</string>
+    <string name="confirm_password">CONFIRM PASSWORD</string>
+    <string name="emergency_contact">Emergency Contact</string>
+    <string name="govt_policies">Govt Policies</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

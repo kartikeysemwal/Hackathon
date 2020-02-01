@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".FirstPage">
+
+    <RadioGroup
+        android:id="@+id/radioLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp">
+
+        <RadioButton
+            android:id="@+id/radioEnglish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/radio_english"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="50sp" />
+
+        <RadioButton
+            android:id="@+id/radioHindi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/radio_hindi"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="50sp"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonNext"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:background="@drawable/btnbg"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:text="@string/next" />
+</RelativeLayout>
