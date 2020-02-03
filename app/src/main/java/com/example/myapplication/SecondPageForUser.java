@@ -44,8 +44,8 @@ public class SecondPageForUser extends AppCompatActivity {
         mediaPlayer31 = MediaPlayer.create(this, R.raw.swasthya);
         mediaPlayer4 = MediaPlayer.create(this, R.raw.currentaffair);
         mediaPlayer41 = MediaPlayer.create(this, R.raw.samayekee);
-        mediaPlayer5 = MediaPlayer.create(this, R.raw.charity);
-        mediaPlayer51 = MediaPlayer.create(this, R.raw.daan);
+        mediaPlayer5 = MediaPlayer.create(this, R.raw.governmentpolicies);
+        mediaPlayer51 = MediaPlayer.create(this, R.raw.sarkaarnitiyaan);
         mediaPlayer6 = MediaPlayer.create(this, R.raw.emergencycontact);
         mediaPlayer61 = MediaPlayer.create(this, R.raw.apatkaleen);
 
@@ -182,7 +182,7 @@ public class SecondPageForUser extends AppCompatActivity {
                 } else if (i == 2) {
                     //Double click
                     i = 0;
-                    Intent intent1 = new Intent(getApplicationContext(), CurrentAffairsPage.class);
+                    Intent intent1 = new Intent(getApplicationContext(), NewsRead.class);
                     intent1.putExtra("lang", lang);
                     startActivity(intent1);
                 }

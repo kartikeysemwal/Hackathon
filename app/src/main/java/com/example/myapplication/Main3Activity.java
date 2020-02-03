@@ -53,7 +53,7 @@ public class Main3Activity extends AppCompatActivity {
         pass2=findViewById(R.id.pass2);
         sgn=findViewById(R.id.sgn);
         log=findViewById(R.id.log);
-        Toast.makeText(Main3Activity.this, lang, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(Main3Activity.this, lang, Toast.LENGTH_SHORT).show();
 
 
 
@@ -95,13 +95,15 @@ public class Main3Activity extends AppCompatActivity {
                                 // the auth state listener will be notified and logic to handle the
                                 // signed in user can be handled in the listener.
                                 //progressBar.setVisibility(View.GONE);
-                                if (!task.isSuccessful()) {
+                                if (!task.isSuccessful())
+                                {
                                     // there was an error
                                     if (password.length() < 6) {
                                         //pass2.setError(getString(R.string.minimum_password));
                                     } else {
-                                        Toast.makeText(Main3Activity.this, "", Toast.LENGTH_LONG).show();
+                                        //Toast.makeText(Main3Activity.this, "", Toast.LENGTH_LONG).show();
                                     }
+                                    Toast.makeText(Main3Activity.this, "Please re enter your details", Toast.LENGTH_SHORT).show();
                                 } else {
                                     Intent intent = new Intent(Main3Activity.this, SecondPageForUser.class);
                                     intent.putExtra("lang", lang);

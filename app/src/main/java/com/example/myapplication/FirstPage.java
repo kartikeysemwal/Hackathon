@@ -33,8 +33,6 @@ public class FirstPage extends AppCompatActivity {
 
         selectedId = radioGroup.getCheckedRadioButtonId();
 
-
-
         buttonNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -95,7 +93,7 @@ public class FirstPage extends AppCompatActivity {
                 // find the radiobutton by returned id
                 radioButton = (RadioButton) findViewById(selectedId);
 
-                Toast.makeText(FirstPage.this, radioButton.getText(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(FirstPage.this, radioButton.getText(), Toast.LENGTH_SHORT).show();
 
             }
 

@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity{
     private DatePickerDialog.OnDateSetListener mDateSetListener;
     private TextView mDisplayDate;
     String date;
+    String d;
     String pickDate;
 
     @Override
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity{
         lang = intent.getStringExtra("lang");
         setAppLocale(lang);
         setContentView(R.layout.activity_main);
+        d = "";
 
 
         name1=findViewById(R.id.name1);
@@ -75,6 +77,14 @@ public class MainActivity extends AppCompatActivity{
                         mDateSetListener,
                         year, month, day);
                 dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                //dialog.getDatePicker().setMinDate();
+                //dialog.getDatePicker().setMinDate(100);
+                Calendar minCal = Calendar.getInstance();
+                minCal.set(Calendar.YEAR, minCal.get(Calendar.YEAR) - 50);
+                Calendar maxCal = Calendar.getInstance();
+                maxCal.set(Calendar.YEAR, maxCal.get(Calendar.YEAR) - 18);
+                dialog.getDatePicker().setMinDate(minCal.getTimeInMillis());
+                dialog.getDatePicker().setMaxDate(maxCal.getTimeInMillis());
                 dialog.show();
                 pickDate = dialog.toString();
             }
@@ -87,6 +97,7 @@ public class MainActivity extends AppCompatActivity{
                 //Log.d(TAG, "onDateSet: mm/dd/yyy: " + month + "/" + day + "/" + year);
 
                 date = month + "/" + day + "/" + year;
+                d = date;
                 mDisplayDate.setText(date);
             }
         };
@@ -94,12 +105,12 @@ public class MainActivity extends AppCompatActivity{
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(date == null)
-                    Toast.makeText(getApplicationContext(), "Pick a date", Toast.LENGTH_SHORT).show();
                 if(name1.getText().toString().length() == 0)
-                    Toast.makeText(getApplicationContext(), "Enter name", Toast.LENGTH_SHORT).show();
-                if(contact1.getText().toString().length() == 0)
-                    Toast.makeText(getApplicationContext(), "Enter contact", Toast.LENGTH_SHORT).show();
+                    name1.setError("Enter name");
+                if(d == "")
+                    Toast.makeText(getApplicationContext(), "Pick a date", Toast.LENGTH_SHORT).show();
+                if(contact1.getText().toString().length() == 0 || contact1.getText().toString().length() != 10 )
+                    contact1.setError("Enter contact correctly");
                 else {
                     Intent intent = new Intent(getApplicationContext(), Main2Activity.class);
                     String name = name1.getText().toString();

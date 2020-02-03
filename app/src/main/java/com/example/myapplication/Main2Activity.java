@@ -60,14 +60,12 @@ public class Main2Activity extends AppCompatActivity {
         pass1=findViewById(R.id.pass1);
         pass3=findViewById(R.id.pass3);
         sgn=findViewById(R.id.sgn);
-        tech=findViewById(R.id.user);
-        stud=findViewById(R.id.admin);
 
         name = intent.getStringExtra("name");
         contact = intent.getStringExtra("contact");
         date = intent.getStringExtra("date");
 
-        Toast.makeText(Main2Activity.this, name+" "+ contact+ " "+ date, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(Main2Activity.this, name+" "+ contact+ " "+ date, Toast.LENGTH_SHORT).show();
 
         sgn.setOnClickListener(new View.OnClickListener() {
             @Override

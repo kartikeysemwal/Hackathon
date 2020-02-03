@@ -33,4 +33,5 @@
     <string name="emergency_contact">Emergency Contact</string>
     <string name="govt_policies">Govt Policies</string>
     <string name="title_activity_maps">Map</string>
+    <string name="min_8_max_12">Min 8 Max 12</string>
 </resources>
