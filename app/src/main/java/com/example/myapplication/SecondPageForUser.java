@@ -80,7 +80,7 @@ public class SecondPageForUser extends AppCompatActivity {
                 if (i == 1) {
                     //Single click
                     handler.postDelayed(r, 250);
-                    Toast.makeText(SecondPageForUser.this, "Double tap to open", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SecondPageForUser.this, R.string.double_tap, Toast.LENGTH_SHORT).show();
                 } else if (i == 2) {
                     //Double click
                     i = 0;
@@ -112,7 +112,7 @@ public class SecondPageForUser extends AppCompatActivity {
                 if (i == 1) {
                     //Single click
                     handler.postDelayed(r, 250);
-                    Toast.makeText(SecondPageForUser.this, "Double tap to open", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SecondPageForUser.this, R.string.double_tap, Toast.LENGTH_SHORT).show();
                 } else if (i == 2) {
                     //Double click
                     i = 0;
@@ -145,7 +145,7 @@ public class SecondPageForUser extends AppCompatActivity {
                 if (i == 1) {
                     //Single click
                     handler.postDelayed(r, 250);
-                    Toast.makeText(SecondPageForUser.this, "Double tap to open", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SecondPageForUser.this, R.string.double_tap, Toast.LENGTH_SHORT).show();
                 } else if (i == 2) {
                     //Double click
                     i = 0;
@@ -178,7 +178,7 @@ public class SecondPageForUser extends AppCompatActivity {
                 if (i == 1) {
                     //Single click
                     handler.postDelayed(r, 250);
-                    Toast.makeText(SecondPageForUser.this, "Double tap to open", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SecondPageForUser.this, R.string.double_tap, Toast.LENGTH_SHORT).show();
                 } else if (i == 2) {
                     //Double click
                     i = 0;
@@ -211,7 +211,7 @@ public class SecondPageForUser extends AppCompatActivity {
                 if (i == 1) {
                     //Single click
                     handler.postDelayed(r, 250);
-                    Toast.makeText(SecondPageForUser.this, "Double tap to open", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SecondPageForUser.this, R.string.double_tap, Toast.LENGTH_SHORT).show();
                 } else if (i == 2) {
                     //Double click
                     i = 0;
@@ -244,7 +244,7 @@ public class SecondPageForUser extends AppCompatActivity {
                 if (i == 1) {
                     //Single click
                     handler.postDelayed(r, 250);
-                    Toast.makeText(SecondPageForUser.this, "Double tap to open", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SecondPageForUser.this, R.string.double_tap, Toast.LENGTH_SHORT).show();
                 } else if (i == 2) {
                     //Double click
                     i = 0;

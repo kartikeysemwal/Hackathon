@@ -33,4 +33,6 @@
     <string name="emergency_contact">आपातकालीन संपर्क</string>
     <string name="govt_policies">सरकार की नीतियां</string>
     <string name="min_8_max_12">न्यूनतम अधिकतम</string>
+    <string name="title_activity_maps">नक्शे</string>
+    <string name="double_tap">खोलने के लिए डबल टैप करें</string>
 </resources>

@@ -1,6 +1,20 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        debug {
+            storeFile file('E:\\Important Files\\Android keystore\\serve.jks')
+            storePassword 'abcd1234'
+            keyAlias = 'MyAndroidKey'
+            keyPassword 'abcd1234'
+        }
+        release {
+            storeFile file('E:\\Important Files\\Udacity Applications Original\\intern\\androidkey.jks')
+            storePassword 'abcd1234'
+            keyAlias = 'MyAndroidKey'
+            keyPassword 'abcd1234'
+        }
+    }
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.example.myapplication"
@@ -9,6 +23,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.release
     }
     buildTypes {
         release {

@@ -34,4 +34,5 @@
     <string name="govt_policies">Govt Policies</string>
     <string name="title_activity_maps">Map</string>
     <string name="min_8_max_12">Min 8 Max 12</string>
+    <string name="double_tap">Double tap to open</string>
 </resources>
