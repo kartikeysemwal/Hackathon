@@ -5,7 +5,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/logo1"
-        android:label="Sarva"
+        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -28,7 +28,8 @@
         <activity android:name=".GovtPolicies" />
         <activity android:name=".CurrentAffairsPage" />
         <activity android:name=".CurrentAffairs" />
-        <activity android:name=".EducationUser" />
+        <activity android:name=".EducationUser"
+            android:launchMode="singleTop"/>
         <activity android:name=".SecondPageForUser" />
         <activity android:name=".FirstPage">
             <intent-filter>
@@ -47,6 +48,16 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
+
+        <receiver android:name=".AppWidgetProviderServe">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/appwidget_info" />
+        </receiver>
+
     </application>
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
