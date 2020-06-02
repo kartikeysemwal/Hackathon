@@ -5,7 +5,7 @@ android {
         release {
             storeFile file('..\\androidkey.jks')
             storePassword 'abcd1234'
-            keyAlias = 'MyAndroidKey'
+            keyAlias = 'key0'
             keyPassword 'abcd1234'
         }
     }
