@@ -48,14 +48,14 @@ public class HealthCare extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 String value = dataSnapshot.getValue(String.class);
                 text1.setText(value);
-                Toast.makeText(HealthCare.this, "Updated", Toast.LENGTH_SHORT).show();
+                Toast.makeText(HealthCare.this, R.string.updated, Toast.LENGTH_SHORT).show();
                 String url = text1.getText().toString();
                 new RetrivePdfStream().execute(url);
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(HealthCare.this, "Failed to load", Toast.LENGTH_SHORT).
+                Toast.makeText(HealthCare.this, R.string.failedToLoad, Toast.LENGTH_SHORT).
                 show();
             }
         });

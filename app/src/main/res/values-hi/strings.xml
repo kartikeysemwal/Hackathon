@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="lang">hi</string>
     <string name="title_activity_login">Sign in</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -9,6 +10,35 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+
+    <string name="show">show</string>
+    <string name="hide">hide</string>
+    <string name="close">Close</string>
+    <string name="discard">Discard</string>
+    <string name="cancel">Cancel</string>
+    <string name="wantToLeave">Do you want to leave?</string>
+    <string name="langKey">lang</string>
+
+    <string name="employmentPath">employment</string>
+
+    <string name="updated">अपडेट किया गया</string>
+    <string name="failedToLoad">लोड करने में विफल</string>
+
+    <string name="enterValidEmail">मान्य ईमेल दर्ज करें</string>
+    <string name="passwordNotMatch">पासवर्ड मेल नहीं खाता</string>
+    <string name="authenticationFailed">प्रमाणीकरण विफल हो गया</string>
+    <string name="createUserWithEmail">Create user with email on complete</string>
+
+    <string name="enterEmailAddress">ईमेल पता दर्ज</string>
+    <string name="enterPassword">पास वर्ड दर्ज करें!</string>
+    <string name="reenterDetails">कृपया अपना विवरण दर्ज करें</string>
+
+    <string name="enterName">नाम दर्ज</string>
+    <string name="pickDate">एक तारीख चुनो</string>
+    <string name="enterContact">आप सही ढंग से नंबर दर्ज करें</string>
+    <string name="marker">Marker</string>
+
+    <string name="failed">अनुत्तीर्ण </string>
 
     <string name="hello">Hello World, MyAndroidAppActivity!</string>
     <string name="radio_english">English</string>
@@ -39,4 +69,5 @@
     <string name="jobs_available">नौकरियां उपलब्ध</string>
     <string name="min_max">मिन 8 मैक्स 12</string>
     <string name="textView">TextView</string>
+    <string name="telephone">tel:0377778888</string>
 </resources>

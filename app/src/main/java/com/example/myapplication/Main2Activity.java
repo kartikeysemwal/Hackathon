@@ -64,10 +64,10 @@ public class Main2Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(emal1.getText().toString().length() == 0) {
-                    emal1.setError("Enter valid email");
+                    emal1.setError(String.valueOf(R.string.enterValidEmail));
                 }
                 if(!(pass2.getText().toString()).equals(pass4.getText().toString()) && pass2.getText().toString()!="" && pass4.getText().toString()!=""){
-                    pass2.setError("Password not matched");
+                    pass2.setError(String.valueOf(R.string.passwordNotMatch));
                 }
                 else{
                     final Intent intent = new Intent(getApplicationContext(), Main3Activity.class);
@@ -93,9 +93,9 @@ public class Main2Activity extends AppCompatActivity {
                             .addOnCompleteListener(Main2Activity.this, new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
-                                    Toast.makeText(Main2Activity.this, "createUserWithEmail:onComplete:" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(Main2Activity.this, String.valueOf(R.string.createUserWithEmail) + task.isSuccessful(), Toast.LENGTH_SHORT).show();
                                     if (!task.isSuccessful()) {
-                                        Toast.makeText(Main2Activity.this, "Authentication failed." + task.getException(),
+                                        Toast.makeText(Main2Activity.this, String.valueOf(R.string.authenticationFailed) + task.getException(),
                                                 Toast.LENGTH_SHORT).show();
                                     } else {
                                         intent.putExtra("lang", lang);

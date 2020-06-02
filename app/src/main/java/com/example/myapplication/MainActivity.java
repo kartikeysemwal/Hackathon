@@ -100,11 +100,11 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 if(name1.getText().toString().length() == 0)
-                    name1.setError("Enter name");
+                    name1.setError(String.valueOf(R.string.enterName));
                 if(d == "")
-                    Toast.makeText(getApplicationContext(), "Pick a date", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), String.valueOf(R.string.pickDate), Toast.LENGTH_SHORT).show();
                 if(contact1.getText().toString().length() == 0 || contact1.getText().toString().length() != 10 )
-                    contact1.setError("Enter contact correctly");
+                    contact1.setError(String.valueOf(R.string.enterContact));
                 else {
                     Intent intent = new Intent(getApplicationContext(), Main2Activity.class);
                     String name = name1.getText().toString();

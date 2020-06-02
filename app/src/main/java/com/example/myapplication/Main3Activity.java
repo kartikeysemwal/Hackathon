@@ -68,12 +68,12 @@ public class Main3Activity extends AppCompatActivity {
                 final String password = pass2.getText().toString();
 
                 if (TextUtils.isEmpty(email)) {
-                    Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), String.valueOf(R.string.enterEmailAddress), Toast.LENGTH_SHORT).show();
                     return;
                 }
 
                 if (TextUtils.isEmpty(password)) {
-                    Toast.makeText(getApplicationContext(), "Enter password!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), String.valueOf(R.string.enterPassword), Toast.LENGTH_SHORT).show();
                     return;
                 }
                 auth.signInWithEmailAndPassword(email, password)
@@ -86,7 +86,7 @@ public class Main3Activity extends AppCompatActivity {
                                     } else {
                                         //Toast.makeText(Main3Activity.this, "", Toast.LENGTH_LONG).show();
                                     }
-                                    Toast.makeText(Main3Activity.this, "Please re enter your details", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(Main3Activity.this, String.valueOf(R.string.reenterDetails), Toast.LENGTH_SHORT).show();
                                 } else {
                                     Intent intent = new Intent(Main3Activity.this, SecondPageForUser.class);
                                     intent.putExtra("lang", lang);

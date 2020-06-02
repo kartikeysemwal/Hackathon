@@ -19,7 +19,7 @@ public class AppWidgetProviderServe extends AppWidgetProvider {
             appWidgetManager.updateAppWidget(appWidgetId, viewsEducation);
 
             Intent intentJobs = new Intent(context, Employement.class);
-            intentJobs.putExtra("lang", "en");
+            intentJobs.putExtra("lang", R.string.lang);
             PendingIntent pendingIntentJobs = PendingIntent.getActivity(context, 0, intentJobs, 0);
             RemoteViews viewsJobs = new RemoteViews(context.getPackageName(), R.layout.app_widget);
             viewsJobs.setOnClickPendingIntent(R.id.appWidgetJobs, pendingIntentJobs);

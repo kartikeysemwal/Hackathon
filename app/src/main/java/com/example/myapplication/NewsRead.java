@@ -56,7 +56,7 @@ public class NewsRead extends AppCompatActivity {
             catch (Exception e)
             {
                 e.printStackTrace();
-                return "Failed";
+                return String.valueOf(R.string.failed);
             }
         }
     }
@@ -83,15 +83,12 @@ public class NewsRead extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        Log.i("Contents of URL", result);
-
         Pattern websiteNews = Pattern.compile("p title=\"(.*?)\"");
         Matcher mpwebsiteNews = websiteNews.matcher(result);
         int i=0;
 
         while (mpwebsiteNews.find()) {
             list_news.add(mpwebsiteNews.group(1));
-            //Log.i("Website", mpwebsiteNews.group(1) + "  " + Integer.toString(++i));
         }
 
         arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, list_news);

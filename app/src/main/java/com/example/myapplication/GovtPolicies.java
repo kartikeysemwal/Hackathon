@@ -20,7 +20,7 @@ import java.util.Locale;
 
 public class GovtPolicies extends AppCompatActivity {
 
-    String wview = "show";
+    String wview =  String.valueOf(R.string.show);
     private WebView webView;
     private ProgressBar spinner;
     Intent intent;
@@ -54,13 +54,13 @@ public class GovtPolicies extends AppCompatActivity {
 
         @Override
         public void onPageStarted(WebView webview, String url, Bitmap favicon) {
-            if (wview.equals("show")) {
+            if (wview.equals( String.valueOf(R.string.show))) {
                 webview.setVisibility(webview.INVISIBLE);
             }
         }
         @Override
         public void onPageFinished(WebView view, String url) {
-            wview = "hide";
+            wview =  String.valueOf(R.string.hide);
             spinner.setVisibility(View.GONE);
             view.setVisibility(webView.VISIBLE);
             super.onPageFinished(view, url);
@@ -71,14 +71,14 @@ public class GovtPolicies extends AppCompatActivity {
     public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
-        builder.setTitle("Close");
-        builder.setMessage("Do you want to leave?");
-        builder.setPositiveButton("Cancel", new DialogInterface.OnClickListener() {
+        builder.setTitle( String.valueOf(R.string.close));
+        builder.setMessage( String.valueOf(R.string.wantToLeave));
+        builder.setPositiveButton( String.valueOf(R.string.cancel), new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 //   MainActivity.super.onBackPressed();
             }
         });
-        builder.setNegativeButton("Discard", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton( String.valueOf(R.string.discard), new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 GovtPolicies.super.onBackPressed();
             }
