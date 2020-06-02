@@ -42,31 +42,6 @@
         android:textColor="@color/white"
         android:textSize="15sp"
         android:layout_marginTop="5dp"/>
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="EMAIL"-->
-<!--        android:id="@+id/email"-->
-<!--        android:layout_below="@+id/name1"-->
-<!--        android:layout_marginLeft="18dp"-->
-<!--        android:textSize="30sp"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:fontFamily="sans-serif-medium"-->
-<!--        android:textColor="@color/white"/>-->
-<!--    <EditText-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="40dp"-->
-<!--        android:id="@+id/email1"-->
-<!--        android:layout_marginHorizontal="15dp"-->
-<!--        android:inputType="textEmailAddress"-->
-<!--        android:background="@drawable/etbg"-->
-<!--        android:fontFamily="sans-serif-light"-->
-<!--        android:layout_below="@+id/email"-->
-<!--        android:paddingLeft="15dp"-->
-<!--        android:paddingRight="15dp"-->
-<!--        android:textColor="@color/white"-->
-<!--        android:textSize="15sp"-->
-<!--        android:layout_marginTop="5dp"/>-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

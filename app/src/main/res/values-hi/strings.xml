@@ -35,4 +35,8 @@
     <string name="min_8_max_12">न्यूनतम अधिकतम</string>
     <string name="title_activity_maps">नक्शे</string>
     <string name="double_tap">खोलने के लिए डबल टैप करें</string>
+    <string name="books_available">पुस्तकें उपलब्ध</string>
+    <string name="jobs_available">नौकरियां उपलब्ध</string>
+    <string name="min_max">मिन 8 मैक्स 12</string>
+    <string name="textView">TextView</string>
 </resources>

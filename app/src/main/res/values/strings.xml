@@ -35,4 +35,8 @@
     <string name="title_activity_maps">Map</string>
     <string name="min_8_max_12">Min 8 Max 12</string>
     <string name="double_tap">Double tap to open</string>
+    <string name="books_available">Books Available</string>
+    <string name="jobs_available">Jobs Available</string>
+    <string name="min_max">Min 8 Max 12</string>
+    <string name="textView">TextView</string>
 </resources>
