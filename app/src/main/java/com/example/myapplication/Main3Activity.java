@@ -2,7 +2,6 @@
 package com.example.myapplication;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -22,13 +21,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
-import java.util.HashMap;
 import java.util.Locale;
-import java.util.Map;
 
 public class Main3Activity extends AppCompatActivity {
     EditText email1,pass2;
@@ -53,7 +47,6 @@ public class Main3Activity extends AppCompatActivity {
         pass2=findViewById(R.id.pass2);
         sgn=findViewById(R.id.sgn);
         log=findViewById(R.id.log);
-        //Toast.makeText(Main3Activity.this, lang, Toast.LENGTH_SHORT).show();
 
 
 
@@ -83,23 +76,13 @@ public class Main3Activity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Enter password!", Toast.LENGTH_SHORT).show();
                     return;
                 }
-
-                //progressBar.setVisibility(View.VISIBLE);
-
-                //authenticate user
                 auth.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener(Main3Activity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                // If sign in fails, display a message to the user. If sign in succeeds
-                                // the auth state listener will be notified and logic to handle the
-                                // signed in user can be handled in the listener.
-                                //progressBar.setVisibility(View.GONE);
                                 if (!task.isSuccessful())
                                 {
-                                    // there was an error
                                     if (password.length() < 6) {
-                                        //pass2.setError(getString(R.string.minimum_password));
                                     } else {
                                         //Toast.makeText(Main3Activity.this, "", Toast.LENGTH_LONG).show();
                                     }
@@ -114,22 +97,6 @@ public class Main3Activity extends AppCompatActivity {
                         });
             }
         });
-
-        /*DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
-
-        Map<String, String> values = new HashMap<>();
-        values.put("Name", "Kartikey");
-
-        databaseReference.push().setValue(values, new DatabaseReference.CompletionListener() {
-            @Override
-            public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
-                if(databaseError == null)
-                    Toast.makeText(Main3Activity.this, "Successful", Toast.LENGTH_SHORT).show();
-                else{
-                    Toast.makeText(Main3Activity.this, "Not successful " + databaseError.toString(), Toast.LENGTH_SHORT).show();
-                }
-            }
-        });*/
     }
 
     private void setAppLocale(String localeCode)

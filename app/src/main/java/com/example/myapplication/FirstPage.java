@@ -36,16 +36,10 @@ public class FirstPage extends AppCompatActivity {
         buttonNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //int selectedId = radioGroup.getCheckedRadioButtonId();
-
-                // find the radiobutton by returned id
                 radioButton = (RadioButton) findViewById(selectedId);
-
-                //Toast.makeText(FirstPage.this, "1"+radioButton.getText()+"1" , Toast.LENGTH_SHORT).show();
                 if(radioGroup.getCheckedRadioButtonId() == selectedId)
                 {
                     setAppLocale("en");
-                    //recreate();
                     Intent intent = new Intent(getApplicationContext(), Main3Activity.class);
                     intent.putExtra("lang", "en");
                     startActivity(intent);
@@ -53,7 +47,6 @@ public class FirstPage extends AppCompatActivity {
                 else if(radioGroup.getCheckedRadioButtonId() == selectedId+1)
                 {
                     setAppLocale("hi");
-                    //recreate();
                     Intent intent = new Intent(getApplicationContext(), Main3Activity.class);
                     intent.putExtra("lang", "hi");
                     startActivity(intent);
@@ -86,15 +79,8 @@ public class FirstPage extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-
-                // get selected radio button from radioGroup
                 int selectedId = radioGroup.getCheckedRadioButtonId();
-
-                // find the radiobutton by returned id
                 radioButton = (RadioButton) findViewById(selectedId);
-
-                //Toast.makeText(FirstPage.this, radioButton.getText(), Toast.LENGTH_SHORT).show();
-
             }
 
         });

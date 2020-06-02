@@ -12,16 +12,13 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.nio.channels.InterruptedByTimeoutException;
 import java.util.Calendar;
 import java.util.Locale;
 
@@ -77,8 +74,6 @@ public class MainActivity extends AppCompatActivity{
                         mDateSetListener,
                         year, month, day);
                 dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                //dialog.getDatePicker().setMinDate();
-                //dialog.getDatePicker().setMinDate(100);
                 Calendar minCal = Calendar.getInstance();
                 minCal.set(Calendar.YEAR, minCal.get(Calendar.YEAR) - 50);
                 Calendar maxCal = Calendar.getInstance();
@@ -94,7 +89,6 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onDateSet(DatePicker datePicker, int year, int month, int day) {
                 month = month + 1;
-                //Log.d(TAG, "onDateSet: mm/dd/yyy: " + month + "/" + day + "/" + year);
 
                 date = month + "/" + day + "/" + year;
                 d = date;

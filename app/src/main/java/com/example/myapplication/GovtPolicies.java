@@ -48,9 +48,6 @@ public class GovtPolicies extends AppCompatActivity {
         {
             webView.loadUrl("https://www.india.gov.in/my-government/documents/policy");
         }
-
-        //webView.loadUrl("https://capslockdigital.io/");
-
     }
 
     private class CustomWebViewClient extends WebViewClient {

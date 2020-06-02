@@ -1,20 +1,11 @@
 package com.example.myapplication;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.widget.Toast;
 
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Employement extends AppCompatActivity {
 
@@ -47,21 +38,5 @@ public class Employement extends AppCompatActivity {
 
             }
         });
-
-        /*DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
-
-        Map<String, String> values = new HashMap<>();
-        values.put("Name", "Kartikey");
-
-        databaseReference.push().setValue(values, new DatabaseReference.CompletionListener() {
-            @Override
-            public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
-                if(databaseError == null)
-                    Toast.makeText(EducationUser.this, "Successful", Toast.LENGTH_SHORT).show();
-                else{
-                    Toast.makeText(EducationUser.this, "Not successful " + databaseError.toString(), Toast.LENGTH_SHORT).show();
-                }
-            }
-        });*/
     }
 }

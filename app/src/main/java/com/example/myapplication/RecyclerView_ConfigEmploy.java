@@ -2,7 +2,6 @@ package com.example.myapplication;
 
 import android.content.Context;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
@@ -31,9 +30,6 @@ public class RecyclerView_ConfigEmploy {
         private TextView mJoin;
         private String key;
 
-        /*public BookItemView(@NonNull View itemView) {
-            super(itemView);
-        }*/
         public BookItemView(ViewGroup parent)
         {
             super(LayoutInflater.from(mContext).inflate(R.layout.books_list_item, parent, false));

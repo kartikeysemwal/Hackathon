@@ -2,14 +2,8 @@ apply plugin: 'com.android.application'
 
 android {
     signingConfigs {
-        debug {
-            storeFile file('E:\\Important Files\\Android keystore\\serve.jks')
-            storePassword 'abcd1234'
-            keyAlias = 'MyAndroidKey'
-            keyPassword 'abcd1234'
-        }
         release {
-            storeFile file('E:\\Important Files\\Udacity Applications Original\\intern\\androidkey.jks')
+            storeFile file('..\\androidkey.jks')
             storePassword 'abcd1234'
             keyAlias = 'MyAndroidKey'
             keyPassword 'abcd1234'
@@ -52,9 +46,6 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:19.2.1'
     implementation 'com.github.barteksc:android-pdf-viewer:3.2.0-beta.1'
     implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
-    /*implementation 'com.google.firebase:firebase-analytics:17.2.0'
-    implementation 'com.google.firebase:firebase-database:19.2.0'
-    implementation 'com.google.firebase:firebase-auth:19.1.0'*/
 }
 
 apply plugin: 'com.google.gms.google-services'

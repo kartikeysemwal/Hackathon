@@ -48,9 +48,6 @@ public class CurrentAffairsPage extends AppCompatActivity {
         {
             webView.loadUrl("https://timesofindia.indiatimes.com/");
         }
-
-        //webView.loadUrl("https://capslockdigital.io/");
-
     }
 
     private class CustomWebViewClient extends WebViewClient {
@@ -78,7 +75,6 @@ public class CurrentAffairsPage extends AppCompatActivity {
         builder.setMessage("Do you want to leave?");
         builder.setPositiveButton("Cancel", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
-                //   MainActivity.super.onBackPressed();
             }
         });
         builder.setNegativeButton("Discard", new DialogInterface.OnClickListener() {

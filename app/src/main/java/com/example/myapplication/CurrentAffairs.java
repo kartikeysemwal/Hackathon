@@ -37,21 +37,5 @@ public class CurrentAffairs extends AppCompatActivity {
 
             }
         });
-
-        /*DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
-
-        Map<String, String> values = new HashMap<>();
-        values.put("Name", "Kartikey");
-
-        databaseReference.push().setValue(values, new DatabaseReference.CompletionListener() {
-            @Override
-            public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
-                if(databaseError == null)
-                    Toast.makeText(EducationUser.this, "Successful", Toast.LENGTH_SHORT).show();
-                else{
-                    Toast.makeText(EducationUser.this, "Not successful " + databaseError.toString(), Toast.LENGTH_SHORT).show();
-                }
-            }
-        });*/
     }
 }

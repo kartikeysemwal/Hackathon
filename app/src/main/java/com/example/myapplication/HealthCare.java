@@ -1,32 +1,19 @@
 package com.example.myapplication;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.res.Configuration;
-import android.content.res.Resources;
-import android.os.Build;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.graphics.Bitmap;
-import android.view.View;
-import android.widget.ProgressBar;
+
 
 import java.net.URL;
-import java.util.Locale;
 
 import android.os.AsyncTask;
-import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
-import com.example.myapplication.R;
 import com.github.barteksc.pdfviewer.PDFView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

@@ -2,7 +2,6 @@
 package com.example.myapplication;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -18,13 +17,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-//import com.google.firebase.auth.FirebaseAuth;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -40,7 +36,6 @@ public class Main2Activity extends AppCompatActivity {
     String name;
     String contact;
     String date;
-    //FirebaseAuth firebaseAuth;
     String lang;
     private FirebaseAuth auth;
 
@@ -64,8 +59,6 @@ public class Main2Activity extends AppCompatActivity {
         name = intent.getStringExtra("name");
         contact = intent.getStringExtra("contact");
         date = intent.getStringExtra("date");
-
-        //Toast.makeText(Main2Activity.this, name+" "+ contact+ " "+ date, Toast.LENGTH_SHORT).show();
 
         sgn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,26 +88,12 @@ public class Main2Activity extends AppCompatActivity {
                     values.put("Email", email);
                     values.put("Password", pwd);
 
-                    /*databaseReference.push().setValue(values, new DatabaseReference.CompletionListener() {
-                        @Override
-                        public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
-                            if(databaseError == null)
-                                Toast.makeText(Main2Activity.this, "Successful", Toast.LENGTH_SHORT).show();
-                            else{
-                                Toast.makeText(Main2Activity.this, "Not successful " + databaseError.toString(), Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    });*/
 
                     auth.createUserWithEmailAndPassword(email, pwd)
                             .addOnCompleteListener(Main2Activity.this, new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     Toast.makeText(Main2Activity.this, "createUserWithEmail:onComplete:" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
-                                    //progressBar.setVisibility(View.GONE);
-                                    // If sign in fails, display a message to the user. If sign in succeeds
-                                    // the auth state listener will be notified and logic to handle the
-                                    // signed in user can be handled in the listener.
                                     if (!task.isSuccessful()) {
                                         Toast.makeText(Main2Activity.this, "Authentication failed." + task.getException(),
                                                 Toast.LENGTH_SHORT).show();
@@ -125,8 +104,6 @@ public class Main2Activity extends AppCompatActivity {
                                     }
                                 }
                             });
-                    //intent.putExtra("lang", lang);
-                    //startActivity(intent);
                 }
             }
         });
