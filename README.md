@@ -47,7 +47,7 @@ User Interface Mocks
 
 ![Screen 2](/images/Screen2.jpg)
 
-**Screen 2**
+**Screen 3**
 
 ![Screen 3](/images/Screen3.jpg)
 
