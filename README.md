@@ -12,6 +12,7 @@ Description
 compileSdkVersion 28
 
 minSdkVersion 19
+
 targetSdkVersion 28
 
 The application will run of about 90 percent of the smartphones present in India using these versions. The most stable version present right now is API level 29. The application fully supports all the features above the required specification.
